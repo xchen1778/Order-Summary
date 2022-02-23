@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------- */
+
+body {
+    background-color:#E0E8FF;
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    background-color: white;
+    width:80%; 
+    max-width:400px;
+    border-radius: 10px;
+    box-shadow: 0 40px 40px -20px rgba(13,48,189,15.18%);
+    padding-bottom: 2rem;
+}
+
+main>img {
+    width:100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.info {
+    text-align: center;
+    width:80%;
+    margin:0 auto;
+}
+
+
+.summary h1 {
+    font-weight: 900;
+    color:hsl(223, 47%, 23%);
+    margin: 1.5em 0 0.8em 0;
+    font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
+}
+
+.summary p {
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+    font-size: clamp(0.8rem, 0.7153rem + 1.6368vw, 1rem);
+    line-height: 1.5em;
+}
+
+.plan {
+    max-width:100%;
+    background-color: hsl(225, 100%, 98%);
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: start;
+    align-items: center;
+    padding: 1.2em;
+    border-radius: 8px;
+    margin: 1.5em 0;
+    gap:12px;
+}
+
+.plan-icon {
+    justify-self: center;
+}
+
+.plan-details {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.plan-name {
+    font-weight:900;
+    color:hsl(223, 47%, 23%);
+    font-size: clamp(0.6rem, 0.6rem + 1.6368vw, 0.9rem);
+}
+
+.plan-price {
+    font-weight:500;
+    color: hsl(224, 23%, 55%);
+    font-size: clamp(0.6rem, 0.6rem + 1.6368vw, 0.9rem);
+}
+
+.change-link {
+    color:#382AE1;
+    font-weight:700;
+    transition: 200ms;
+    font-size: clamp(0.6rem, 0.6rem + 1.6368vw, 0.9rem);
+}
+
+.change-link:hover {
+    color: #766CF1;
+    text-decoration: none;
+}
+
+.button {
+    display:flex;
+    flex-direction: column;
+    gap:20px;   
+}
+
+.payment, .cancel {
+    text-decoration: none;
+    font-weight:900;
+    padding:1em;
+    font-size: clamp(0.6rem, 0.6rem + 1.6368vw, 0.9rem);
+}
+
+.payment {
+    background-color: #382AE1;
+    color: white;
+    box-shadow:0px 20px 20px 0px rgba(56, 42, 225, 0.2);
+    border-radius: 8px;
+}
+
+.payment:hover {
+    background-color:#766CF1;
+    transition: 200ms ease-in-out;
+}
+
+.cancel {
+    color: #717FA6;
+    transition: 200ms ease-in-out;
+}
+
+.cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+@media screen and (min-width:375px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top 100px;
+    }
+}
